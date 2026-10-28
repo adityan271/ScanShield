@@ -1,0 +1,22 @@
+{
+  "name": "scamshield-india",
+  "version": "1.0.0",
+  "description": "ScamShield India — Cybersecurity web application to analyse suspicious messages, recognise warning signs, and prepare scam reports.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build:server": "npm --prefix server run build",
+    "build:client": "npm --prefix client run build",
+    "build": "npm run build:server && npm run build:client",
+    "test": "node tests/api-test.js && node tests/white-redesign-test.js",
+    "test:api": "node tests/api-test.js",
+    "test:ui": "node tests/white-redesign-test.js",
+    "start": "node server/dist/server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+
+  /* Page and Card Surfaces */
+  --bg-page: #FFFFFF;
+  --bg-secondary: #F7F9FC;
+  --bg-card: #FFFFFF;
+  --bg-card-secondary: #F7F9FC;
+  --bg-input: #FFFFFF;
+
+  /* Typography */
+  --text-primary: #172033;
+  --text-secondary: #5E687B;
+  --text-muted: #7B8495;
+
+  /* Brand / Primary */
+  --brand-primary: #2457D6;
+  --brand-hover: #1946B8;
+  --brand-accent: #EEF4FF;
+  --brand-accent-border: #D0E1FD;
+  --brand-btn-text: #FFFFFF;
+
+  /* Borders */
+  --border-main: #E1E6EF;
+  --border-subtle: #EDF1F7;
+
+  /* Risk Categories */
+  --risk-high-text: #C93636;
+  --risk-high-bg: #FFF0F0;
+  --risk-high-border: #FCD5D5;
+
+  --risk-med-text: #A86408;
+  --risk-med-bg: #FEF8E8;
+  --risk-med-border: #FCE6B3;
+
+  --risk-low-text: #237A4B;
+  --risk-low-bg: #EAF7EF;
+  --risk-low-border: #C1E8CE;
+
+  --risk-info-text: #2457D6;
+  --risk-info-bg: #EEF4FF;
+  --risk-info-border: #D0E1FD;
+
+  /* Scrollbar */
+  --scrollbar-track: #F7F9FC;
+  --scrollbar-thumb: #D0D7E2;
+  --scrollbar-thumb-hover: #B4BFCF;
+}
+
+.dark, [data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Page and Card Surfaces */
+  --bg-page: #0B1120;
+  --bg-secondary: #111A2E;
+  --bg-card: #151F33;
+  --bg-card-secondary: #111A2E;
+  --bg-input: #10192B;
+
+  /* Typography */
+  --text-primary: #F1F5F9;
+  --text-secondary: #A7B2C5;
+  --text-muted: #7A89A0;
+
+  /* Brand / Primary */
+  --brand-primary: #7CA2FF;
+  --brand-hover: #5B8CFF;
+  --brand-accent: #172647;
+  --brand-accent-border: #2A3F6C;
+  --brand-btn-text: #0B1120;
+
+  /* Borders */
+  --border-main: #2A3850;
+  --border-subtle: #1E293B;
+
+  /* Risk Categories */
+  --risk-high-text: #F87171;
+  --risk-high-bg: #2D181D;
+  --risk-high-border: #5E272B;
+
+  --risk-med-text: #FBBF24;
+  --risk-med-bg: #2D2513;
+  --risk-med-border: #5E4D1D;
+
+  --risk-low-text: #4ADE80;
+  --risk-low-bg: #122A1E;
+  --risk-low-border: #1E4E36;
+
+  --risk-info-text: #7CA2FF;
+  --risk-info-bg: #132238;
+  --risk-info-border: #203C60;
+
+  /* Scrollbar */
+  --scrollbar-track: #0B1120;
+  --scrollbar-thumb: #2A3850;
+  --scrollbar-thumb-hover: #3D5073;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* Subtle transitions for theme switching (150-200ms) without delaying interactions */
+body, header, nav, main, section, footer, div, input, textarea, select, button {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 180ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Custom scrollbar respecting light/dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}

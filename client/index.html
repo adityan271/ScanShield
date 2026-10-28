@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScamShield India — Spot the warning signs. Stay one step ahead.</title>
+    <meta name="description" content="An AI-assisted tool that analyses suspicious messages, explains potential scam indicators, and prepares reports for official cybercrime authorities." />
+    <!-- Anti-FOUC Theme Initialization (Light by default) -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('scamshield_theme');
+          if (saved === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.setAttribute('data-theme', 'light');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <!-- Modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[var(--bg-page)] text-[var(--text-primary)] min-h-screen antialiased selection:bg-[var(--brand-primary)] selection:text-[var(--brand-btn-text)]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
